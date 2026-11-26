@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midnight Vault</title>
+
+    <link rel="stylesheet" href="css/style-1.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>MIDNIGHT VAULT</span>
+        </div>
+
+        <button id="newNoteBtn" class="new-note">
+            <i class="fa-solid fa-plus"></i>
+            NEW NOTE
+        </button>
+
+        <div class="categories">
+
+            <h4>CATEGORIES</h4>
+
+            <ul>
+                <li class="active" id="count-all-parent"> 
+                    <!-- Added mapping context if needed -->
+                    <span>All</span>
+                    <span id="count-all">0</span>
+                </li>
+
+                <li data-category="Personal">
+                    <span>
+                    <span class="dot personal"></span>
+            Personal
+                    </span>
+                    <span id="count-personal">0</span>
+                </li>
+
+                <li data-category="Work">
+                    <span>
+                    <span class="dot work"></span>
+                    Work
+                    </span>
+                    <span id="count-work">0</span>
+                </li>
+
+                <li data-category="Finance">
+                    <span>
+                    <span class="dot finance"></span>
+                    Finance
+                    </span>
+                    <span id="count-finance">0</span>
+                </li>
+
+                <li data-category="Health">
+                    <span>
+                    <span class="dot health"></span>
+                    Health
+                    </span>
+                    <span id="count-health">0</span>
+                </li>
+
+                <li data-category="Ideas">
+                    <span>
+                    <span class="dot ideas"></span>
+                    Ideas
+                    </span>
+                    <span id="count-ideas">0</span>
+                </li>
+
+                <li data-category="Other">
+                    <span>
+                    <span class="dot other"></span>
+                    Other
+                    </span>
+                    <span id="count-other">0</span>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="encryption">
+
+            <p>● ENCRYPTED</p>
+
+            <small>AES-256-GCM</small>
+
+            <small>PBKDF2 · 210k Iter</small>
+
+        </div>
+
+    </aside>
+
+    <!-- ================= NOTES PANEL ================= -->
+
+    <section class="notes-panel">
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search notes..."
+            >
+
+        </div>
+
+        <div id="notesList" class="notes-list">
+
+            <!-- JavaScript Creates Notes Here -->
+
+        </div>
+
+    </section>
+
+    <!-- ================= EDITOR ================= -->
+
+    <main class="editor">
+
+        <!-- TOP BAR -->
+
+        <div class="editor-header">
+
+            <div class="categories-buttons">
+
+                <button class="category-btn active" data-category="Personal">
+                    Personal
+                </button>
+
+                <button class="category-btn" data-category="Work">
+                    Work
+                </button>
+
+                <button class="category-btn" data-category="Finance">
+                    Finance
+                </button>
+
+                <button class="category-btn" data-category="Health">
+                    Health
+                </button>
+
+                <button class="category-btn" data-category="Ideas">
+                    Ideas
+                </button>
+
+                <button class="category-btn" data-category="Other">
+                    Other
+                </button>
+
+            </div>
+
+            <div class="top-actions">
+
+                <span id="saveStatus">
+                    Saved
+                </span>
+
+                <button id="deleteBtn">
+                    <i class="fa-solid fa-trash"></i>
+                    Delete
+                </button>
+
+                <button id="exportBtn" class="exportBtn">
+                 <i class="fa-solid fa-download"></i>
+                    Export File
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- TITLE -->
+
+        <input
+            id="noteTitle"
+            class="title-input"
+            type="text"
+            placeholder="Note title..."
+        >
+
+        <!-- INFO -->
+
+        <div class="note-info">
+
+            <span id="createdDate">
+                Created -
+            </span>
+
+            <span id="modifiedDate">
+                Modified -
+            </span>
+
+        </div>
+
+        <!-- BODY -->
+
+        <textarea
+            id="noteBody"
+            placeholder="Start writing your private note..."
+        ></textarea>
+
+        <!-- FOOTER -->
+
+        <div class="editor-footer">
+
+            <div>
+
+                <span id="wordCount">
+                    0 Words
+                </span>
+
+                |
+
+                <span id="charCount">
+                    0 Characters
+                </span>
+
+            </div>
+
+            <span id="currentCategory">
+                Personal
+            </span>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="javascript/app.js"></script>
+
+</body>
+</html>

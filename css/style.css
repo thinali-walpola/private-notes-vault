@@ -1,0 +1,252 @@
+/* ==========================
+   GOOGLE FONTS
+========================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Orbitron:wght@400;500;600;700&display=swap');
+
+/* ==========================
+   ROOT VARIABLES
+========================== */
+
+:root{
+
+    /* Background */
+    --bg-dark:#0c1018;
+    --bg-card:#171c28;
+    --bg-input:#22283a;
+    --bg-btn:#6f63d6;
+
+    /* Primary */
+    --primary:#7f6fff;
+    --primary-hover:#9487ff;
+    --primary-light:#b4a7ff;
+
+    /* Border */
+    --border:#31385b;
+    --input-border:#404764;
+
+    /* Text */
+    --white:#ffffff;
+    --text:#b4bcd0;
+    --paragraph:#6d74a8;
+    --muted:#626a90;
+    --purple-gray:#70779e;
+
+    /* Icons */
+    --icon:#8b7cff;
+    --icon-muted:#7d84a8;
+    --icon-text:#757ea6;
+
+    /* Effects */
+    --transition:.3s ease;
+    --radius:4px;
+
+    /* Button */
+    --hover:#8678ff;
+    
+    /* Fonts */
+    --heading-font:'Orbitron',sans-serif;
+    --body-font:'Inter',sans-serif;
+
+}
+
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Inter,sans-serif;
+    background: var(--bg-dark);
+    color:white;
+    overflow:hidden;
+}
+
+/* ==========================
+   GRID
+========================== */
+.grid{
+
+    position:fixed;
+    inset:0;
+
+    background-image:
+    linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+
+    background-size:50px 50px;
+}
+
+/* ==========================
+   CENTER
+========================== */
+.container{
+    position:relative;
+    z-index:10;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+
+/* ==========================
+   LOGO
+========================== */
+
+.circle{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    border:2px solid var(--primary);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+    margin-bottom:25px;
+    color: var(--icon);
+    font-size:28px;
+    background: var(--bg-card);
+}
+
+.logo h1{
+    font-family:Orbitron,sans-serif;
+    letter-spacing:7px;
+    font-size:32px;
+    text-align:center;
+}
+
+.logo p{
+    text-align:center;
+    margin-top:10px;
+    color: var(--paragraph);
+    font-size:12px;
+    letter-spacing:3px;
+}
+
+/* ==========================
+   CARD
+========================== */
+
+.card{
+    margin-top:40px;
+    width:420px;
+    background: var(--bg-card);
+    border:1px solid var(--border);
+    padding:35px;
+}
+
+.title{
+    color:#9b8dff;
+    letter-spacing:3px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.card p{
+
+    margin:15px 0 25px;
+    color:var(--purple-gray);
+    line-height:1.6;
+}
+
+/* ==========================
+   INPUT
+========================== */
+
+.input-box{
+    position:relative;
+}
+
+.input-box input{
+    width:100%;
+    background: var(--bg-input);
+    border:1px solid var(--input-border);
+    color:white;
+    padding:15px;
+    font-size:15px;
+    outline:none;
+}
+
+.input-box i{
+    position:absolute;
+    right:18px;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+    color: var(--icon-text);
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.createBtn{
+    width:100%;
+    margin-top:18px;
+    padding:15px;
+    background: var(--bg-btn);
+    border:none;
+    color:white;
+    font-family:Orbitron,sans-serif;
+    letter-spacing:2px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.createBtn:hover{
+    background:var(--hover);
+}
+
+/* ==========================
+   FOOTER
+========================== */
+.footer{
+    margin-top:35px;
+    color:var(--muted);
+    font-size:11px;
+    letter-spacing:2px;
+}
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:500px){
+
+    .container{
+        width:90%;
+    }
+
+    h1{
+        font-size:14px;
+        letter-spacing:5px;
+    }
+
+
+    .card{
+        padding:25px;
+
+    }
+
+    .title{
+        font-size: 12px;
+    }
+
+    .card p{
+        font-size: 14px;
+    }
+
+    .input-box input{
+        font-size: 14px;
+    }
+
+    .createBtn{
+        font-size: 16px;
+    }
+}
