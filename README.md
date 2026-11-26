@@ -37,3 +37,8 @@ Ensure you have [Node.js](https://nodejs.org/) installed on your computer.
    ```bash
    git clone [https://github.com/YOUR_USERNAME/private-notes-vault.git](https://github.com/YOUR_USERNAME/private-notes-vault.git)
    cd private-notes-vault/backend
+
+
+🔹 Clean Structure Easy navigation Minimal design User-friendly experience watch Demo live [(https://thinali-walpola.github.io/private-notes-vault/)]
+
+👋 I can turn your design into a clean, modern, professional website—order here 👉 [(https://www.fiverr.com/disansa_web?public_mode=true)] 🚀
